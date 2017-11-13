@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>TA Budget Status</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<table id="myTable">
+		<tr>
+			<th></th>
+			<th>STUDENT</th>
+			<th>ADVISOR</th>
+			<th>AWARD<br/>STATUS</th>
+			<th>SEMESTER</th>
+			<th>TYPE</th>
+			<th>BUDGET<br />#</th>
+			<th>PERCENTAGE</th>
+		</tr>
+		
+		<tr>
+			<td><input type="checkbox" class="check_Box" /><br /><br />
+			<img src="down.png" width="25px" class="hiddenRow" /></td>
+			<td>Student 1</td>
+			<td>Teacher 1</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>12345</td>
+			<td>100%</td>
+		</tr>
+		
+		<tr class="dropDownTextArea" ><td colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <img src="pencil.png" width="25px" /><br />
+			Tuition Number: <img src="pencil.png" width="25px" /><br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+		
+		<tr>
+			<td><input type="checkbox" class="check_Box" /><br /><br />
+			<img src="down.png" width="25px" class="hiddenRow"/></td>
+			<td>Student 2</td>
+			<td>Teacher 2</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>23456</td>
+			<td>100%</td>
+		</tr>
+		
+		<tr class="dropDownTextArea"><td colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <img src="pencil.png" width="25px" /><br />
+			Tuition Number: <img src="pencil.png" width="25px" /><br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+		
+		<tr>
+			<td><input type="checkbox" class="check_Box" /><br /><br />
+			<img src="down.png" width="25px" class="hiddenRow" /></td>
+			<td>Student 3</td>
+			<td>Teacher 3</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>34567</td>
+			<td>100%</td>
+		</tr>
+		
+		<tr class="dropDownTextArea" ><td colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <img src="pencil.png" width="25px" /><br />
+			Tuition Number: <img src="pencil.png" width="25px" /><br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+	</table>
+
+	
+	<button id="button" >SUBMIT SELECTED AWARDS</button> 
+	
+</body>
+<script>
+<!-- To disable the button -->
+	$(document).ready(function() {
+		$(".dropDownTextArea").css("display","none");
+		$("#button").css({
+			"disabled":"true",
+			"backgroundColor":"gray",
+			"border":"2px solid gray",
+		});
+<!-- To change the color of button and highligh the selected row-->
+	$(".check_Box").on("click",function() {
+		var len = $("input:checked").length;
+		var check = $(this.checked);
+		$("#button").css("disabled",(len>0)?"false":"true");
+		$("#button").css("backgroundColor",(len>0)?"orange":"gray");
+		$("#button").css("border",(len>0)?"2px solid orange":"2px solid gray");
+		$(this).parent().parent().css("backgroundColor",(check[0]==true)?"LemonChiffon":"#fff");
+	});
+<!--To display hidden row-->
+	$(".hiddenRow").on("click",function() {
+		$(this).parent().parent().next(".dropDownTextArea").toggle();
+	});
+
+});		  
+</script>
+</html>

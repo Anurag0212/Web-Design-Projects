@@ -1,0 +1,43 @@
+body {
+	background-color:#F5F5DC;
+	color: #2E0000;
+}
+h1 {
+	text-align:center;
+	background-color:#D2B48C;
+	color: #2E0000;
+}
+
+h3 {
+	background-color:#D2B48C;
+	color: #2E0000;
+}
+
+
+ul
+{
+	list-style-image:url('marker.gif');
+}
+
+
+nav 	
+{
+	font-size:20px;
+	text-align:left;
+	font-weight:bold;
+    padding: 5px;
+}
+
+nav a { text-decoration:none;
+}
+nav a:link { color:#D2691E;}
+nav a:visited {color:#DEB887;}
+nav a:hover { color:#BDB76B;}
+
+footer {
+	font-style:italic;
+	text-align:center;
+	background-color: #D2B48C;
+	color: #000000;
+}
+

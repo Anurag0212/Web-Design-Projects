@@ -1,0 +1,70 @@
+body {
+	background-color:#FFF8DC;
+	background-image: linear-gradient(to bottom, #FFFFFF, #FFF8DC);
+	background-repeat: no-repeat;
+	
+}
+h1 {
+	background-color:#CCAA66;
+	background-repeat: no-repeat;
+	background-image: url("javalogo.gif");
+	background-position:center;
+	margin:0px;
+	height:100px;
+}
+
+h3 {
+	background-color:#D2B48C;
+	color: #2E0000;
+}
+#wrapper
+{
+	margin:auto;
+	width:80%;
+	box-shadow: 3px #2E0000;
+	border:2px solid #CCAA66;
+}
+
+#hero{
+	background-image: url("windingroad.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 300px;
+	color: #F5F5DC;
+}
+
+#news
+{
+	margin-left:100px;
+	margin-right:100px;
+
+}
+
+nav 	
+{
+	background-color:#D2B48C;
+	font-size:20px;
+	text-align:center;
+	font-weight:bold;
+	padding:10px;
+
+}
+
+nav a { text-decoration:none;
+}
+nav a:link { color:#D2691E;}
+nav a:visited {color:#A52A2A;}
+nav a:hover { color:#DC143C;}
+
+main{
+	padding: 5px;
+	display: block;
+}
+
+footer {
+	font-style:italic;
+	text-align:center;
+	background-color: #CCAA66;
+	color: #000000;
+}
+

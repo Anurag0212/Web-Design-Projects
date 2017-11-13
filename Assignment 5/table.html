@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>TA Budget Status</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<link rel="stylesheet" type="text/css" href="style.css">	
+</head>
+
+<body>
+	<table id="myTable">
+		<tr>
+			<th></th>
+			<th>STUDENT</th>
+			<th>ADVISOR</th>
+			<th>AWARD<br/>STATUS</th>
+			<th>SEMESTER</th>
+			<th>TYPE</th>
+			<th>BUDGET<br />#</th>
+			<th>PERCENTAGE</th>
+		</tr>
+		
+		<tr>
+			<td><input type="checkbox" id="checkbox1" onchange="selected(this)"/><br /><br />
+			<a href="#!" onclick="display('row_num1');"><img src="down.png" width="25px" /></td>
+			<td>Student 1</td>
+			<td>Teacher 1</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>12345</td>
+			<td>100%</td>
+		</tr>
+		
+		<tr class="dropDownTextArea" id='row_num1'><td colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <img src="pencil.png" width="25px" /><br />
+			Tuition Number: <img src="pencil.png" width="25px" /><br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+		
+		<tr>
+			<td><input type="checkbox" id="checkbox2" onchange="selected(this)"/><br /><br />
+			<a href="#!" onclick="display('row_num2');"><img src="down.png" width="25px" /></td>
+			<td>Student 2</td>
+			<td>Teacher 2</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>23456</td>
+			<td>100%</td>
+		</tr>
+		
+		<tr class="dropDownTextArea" id='row_num2'><td colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <img src="pencil.png" width="25px" /><br />
+			Tuition Number: <img src="pencil.png" width="25px" /><br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+		
+		<tr>
+			<td><input type="checkbox" id="checkbox3" onchange="selected(this)"/><br /><br />
+			<a href="#!" onclick="display('row_num3');"><img src="down.png" width="25px" /></td>
+			<td>Student 3</td>
+			<td>Teacher 3</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>34567</td>
+			<td>100%</td>
+		</tr>
+		
+		<tr class="dropDownTextArea" id='row_num3'><td colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <img src="pencil.png" width="25px" /><br />
+			Tuition Number: <img src="pencil.png" width="25px" /><br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+	</table>
+
+	
+	<button id="button" disabled>SUBMIT SELECTED AWARDS</button> <!-- disabled the button-->
+
+
+<script>
+<!--To display hidden row-->
+document.getElementById("row_num1").style.display = 'none';
+document.getElementById("row_num2").style.display = 'none';
+document.getElementById("row_num3").style.display = 'none';
+function display(row)
+{
+    if(document.getElementById(row).style.display == ''){
+        document.getElementById(row).style.display = 'none';
+    }else{
+        document.getElementById(row).style.display = '';
+    }
+}
+
+<!--Highlight the selected row and change the color of the button -->
+	var submit_button = document.getElementById("button")
+    submit_button.style.backgroundColor = "GRAY";
+    submit_button.style.border="BLACK"
+		
+    function selected(checkbox) {
+        if (checkbox.checked == true) {
+        submit_button.disabled=false;
+        checkbox.parentElement.parentElement.bgColor = 'LemonChiffon';
+        submit_button.style.backgroundColor = "ORANGE";
+        submit_button.style.border = "ORANGE"
+    } else {
+        checkbox.parentElement.parentElement.bgColor = 'WHITE';
+        submit_button.disabled=false;
+        submit_button.style.backgroundColor = "ORANGE";
+        submit_button.style.border = "ORANGE"
+    }
+    if(document.getElementById("checkbox1").checked== false && document.getElementById("checkbox2").checked== false &&
+    document.getElementById("checkbox3").checked== false ) {
+        document.getElementById("button").disabled = true;
+        submit_button.style.backgroundColor = "GRAY";
+        submit_button.style.border = "GRAY"
+        
+    }
+}		  
+</script>		
+</body>
+</html>

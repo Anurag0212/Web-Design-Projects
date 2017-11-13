@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaJam Coffee House</title>
+<link rel="stylesheet" type="text/css" href="javajam.css">
+</head>
+<body>
+<div id="wrapper">
+<h1></h1>
+<nav>
+<a href="index.html">Home </a> &nbsp;
+<div class="dropdown">
+<a href="menu.html">Menu </a> <br>
+<div class="cafe_menu">
+<a href="menuhotbrew.html">Hot Brews </a></br>
+<a href="menucoldbrew.html">Smoothies </a>
+</div>
+</div>
+<a href="music.html">Music </a> &nbsp;
+<a href="gallery.html">Gallery </a> &nbsp;
+<a href="jobs.html">Jobs </a> 
+</nav> <br>
+
+<main>
+
+<h2 style="text-align:center">Photo Gallery </h2>
+
+
+<div class="w3-content w3-section" style="max-width:750px position:center">
+  <img class="photogallery" src="Coffee_gallery_1.jpg" style="width:100%">
+  <img class="photogallery" src="Coffee_gallery_2.jpg" style="width:100%">
+  <img class="photogallery" src="Coffee_gallery_3.jpg" style="width:100%">
+  <img class="photogallery" src="Coffee_gallery_4.jpg" style="width:100%">
+  <img class="photogallery" src="Coffee_gallery_5.jpg" style="width:100%">
+</div>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var slides = document.getElementsByClassName("photogallery");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > slides.length) {myIndex = 1}    
+    slides[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); 
+}
+</script>
+
+<br><br>
+
+<div id="wrapper">
+</div>
+</div>
+</main>
+
+<footer>
+Copyright &copy; 2017 JavaJam Coffee House <br/>
+Mail &nbsp;<b>Anurag Singh:</b><a href="mailto:singh.anura@husky.neu.edu">singh.anura@husky.neu.edu</a>
+</footer>
+</div>
+</body>
+</html>
